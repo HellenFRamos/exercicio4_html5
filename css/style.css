@@ -1,0 +1,443 @@
+/* =========================================================
+   Rotina de Saúde e Bem-Estar — folha de estilos
+   Identidade: verde-floresta + laranja-energia, tipografia
+   serifada nos títulos (Fraunces) e sans-serif no corpo
+   (Work Sans).
+   ========================================================= */
+
+:root {
+    --cor-fundo: #F4F7F1;
+    --cor-fundo-alt: #E8F0E3;
+    --cor-texto: #1E2A22;
+    --cor-primaria: #1F4B3F;
+    --cor-primaria-clara: #2E6B57;
+    --cor-destaque: #E0662E;
+    --cor-destaque-escura: #C4551F;
+    --cor-creme: #FBF8F1;
+    --cor-linha: #CBD8C2;
+    --fonte-titulo: "Fraunces", Georgia, serif;
+    --fonte-corpo: "Work Sans", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-corpo);
+    line-height: 1.65;
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    margin-top: 0;
+}
+
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+a:hover {
+    border-bottom-color: var(--cor-destaque);
+}
+
+/* ---------- Cabeçalho ---------- */
+
+header {
+    background: linear-gradient(155deg, var(--cor-primaria) 0%, var(--cor-primaria-clara) 100%);
+    color: var(--cor-creme);
+    text-align: center;
+    padding: 48px 20px 40px;
+}
+
+header h1 {
+    font-size: clamp(28px, 4vw, 42px);
+    max-width: 700px;
+    margin: 0 auto 28px;
+    letter-spacing: 0.2px;
+}
+
+header figure {
+    margin: 0 auto;
+    max-width: 480px;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 16px 30px -14px rgba(0, 0, 0, 0.45);
+}
+
+header figcaption {
+    margin-top: 12px;
+    font-size: 0.92rem;
+    font-style: italic;
+    color: var(--cor-fundo);
+    opacity: 0.85;
+}
+
+/* ---------- Navegação ---------- */
+
+nav {
+    background-color: var(--cor-creme);
+    border-bottom: 1px solid var(--cor-linha);
+    padding: 10px 12px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    display: inline-block;
+    margin: 4px 4px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--cor-primaria);
+    border-bottom: none;
+}
+
+nav a:hover {
+    background-color: var(--cor-fundo-alt);
+}
+
+/* ---------- Conteúdo principal ---------- */
+
+main {
+    width: 92%;
+    max-width: 880px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+section {
+    margin-top: 56px;
+}
+
+section > h2 {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    border-left: 5px solid var(--cor-destaque);
+    padding-left: 14px;
+    margin-bottom: 18px;
+}
+
+h3 {
+    color: var(--cor-primaria-clara);
+}
+
+p {
+    font-size: 1rem;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+aside {
+    background-color: var(--cor-fundo-alt);
+    border-left: 4px solid var(--cor-primaria);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin-top: 20px;
+}
+
+aside h3 {
+    margin-top: 0;
+}
+
+.first {
+    border-left: 3px solid var(--cor-destaque);
+    padding-left: 14px;
+}
+
+.last {
+    border-left: 3px solid var(--cor-primaria);
+    padding-left: 14px;
+}
+
+.highlight {
+    background-color: #FFF1CE;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.ufo {
+    font-family: "Courier New", monospace;
+    font-size: 0.95rem;
+    color: var(--cor-creme);
+    background-color: var(--cor-primaria);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+dl {
+    margin-top: 10px;
+}
+
+dt {
+    color: var(--cor-primaria);
+    margin-top: 12px;
+}
+
+dd {
+    margin: 4px 0 4px 20px;
+}
+
+ul li::marker,
+ol li::marker {
+    color: var(--cor-destaque);
+    font-weight: 700;
+}
+
+/* ---------- Tabela ---------- */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: var(--cor-creme);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px 14px;
+    text-align: center;
+    border-bottom: 1px solid var(--cor-linha);
+}
+
+thead th {
+    background-color: var(--cor-primaria);
+    color: var(--cor-creme);
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--cor-fundo-alt);
+}
+
+progress {
+    width: 220px;
+    height: 14px;
+    accent-color: var(--cor-destaque);
+    vertical-align: middle;
+}
+
+/* ---------- Formulário ---------- */
+
+form {
+    background-color: #FFFFFF;
+    border: 1px solid var(--cor-linha);
+    border-left: 5px solid var(--cor-destaque);
+    border-radius: 10px;
+    padding: 28px;
+    max-width: 640px;
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.92rem;
+    margin-top: 14px;
+    margin-bottom: 4px;
+}
+
+input, select, textarea, button {
+    font-family: var(--fonte-corpo);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+input[list],
+textarea {
+    width: 100%;
+    max-width: 460px;
+    padding: 9px 12px;
+    border: 1px solid var(--cor-linha);
+    border-radius: 6px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(31, 75, 63, 0.15);
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 6px;
+}
+
+input[type="range"] {
+    width: 240px;
+    accent-color: var(--cor-destaque);
+}
+
+button {
+    margin-top: 18px;
+    background-color: var(--cor-destaque);
+    color: #FFFFFF;
+    border: none;
+    padding: 11px 26px;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--cor-destaque-escura);
+}
+
+/* ---------- Mídia e elementos gráficos ---------- */
+
+#midia article,
+#graficos article {
+    background-color: #FFFFFF;
+    border: 1px solid var(--cor-linha);
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+audio {
+    width: 100%;
+}
+
+video {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+}
+
+canvas, svg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--cor-linha);
+}
+
+.aviso {
+    font-size: 0.88em;
+    color: #5B6B60;
+}
+
+/* ---------- Rodapé ---------- */
+
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-creme);
+    text-align: center;
+    padding: 26px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+footer time {
+    font-weight: 600;
+}
+
+/* ---------- Responsivo ---------- */
+
+@media (max-width: 600px) {
+    header {
+        padding: 36px 16px 30px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    input[type="range"] {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   EXERCÍCIO 4 — continuação do CSS do Exercício 3
+   Redefinição de novas tags + novas classes/ids, aplicadas
+   dentro deste mesmo index.html.
+   ========================================================= */
+
+/* ---------- 1) Redefinição de novas tags HTML ---------- */
+
+blockquote {
+    margin: 20px 0;
+    padding: 14px 20px;
+    background-color: var(--cor-fundo-alt);
+    border-left: 4px solid var(--cor-primaria);
+    font-style: italic;
+    color: var(--cor-primaria);
+}
+
+hr {
+    border: none;
+    border-top: 1px dashed var(--cor-linha);
+    margin: 24px 0;
+}
+
+code {
+    font-family: "Courier New", monospace;
+    background-color: var(--cor-fundo-alt);
+    color: var(--cor-primaria);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+mark {
+    background-color: #FFF1CE;
+    color: var(--cor-texto);
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+
+/* ---------- 2) Novas classes ---------- */
+
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--cor-linha);
+    border-radius: 10px;
+    padding: 22px;
+}
+
+.card-destaque {
+    border-left: 5px solid var(--cor-destaque);
+}
+
+.tabela-fit {
+    overflow-x: auto;
+}
+
+.btn-cta {
+    box-shadow: 0 8px 18px -8px rgba(224, 102, 46, 0.6);
+    letter-spacing: 0.3px;
+}
+
+/* ---------- 3) Novos ids ---------- */
+
+#contato-rapido p {
+    margin: 6px 0;
+}
+
+#imc {
+    margin-top: 28px;
+}
+
+#imc .formula {
+    font-size: 1.05rem;
+}

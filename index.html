@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hábitos Saudáveis — Exercício 4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS EXTERNO: mesma folha de estilos do Exercício 3, agora com novas tags/classes/ids no final -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS INTERNO: regra específica só desta página (Exercício 4) -->
+    <style>
+        .selo-novo {
+            display: inline-block;
+            background-color: var(--cor-destaque);
+            color: var(--cor-creme);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 999px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        #imc {
+            background-color: var(--cor-fundo-alt);
+            border-radius: 10px;
+            padding: 18px 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Rotina de Saúde e Bem-Estar <span class="selo-novo">Exercício 4</span></h1>
+        <figure>
+            <img src="img/treino.jpg" alt="Imagem ilustrativa de treino" title="Imagem ilustrativa de treino">
+            <figcaption>A prática regular de atividades físicas contribui para uma rotina saudável.</figcaption>
+        </figure>
+    </header>
+
+    <nav>
+        <a href="#habitos">Hábitos</a>
+        <a href="#treino">Treino</a>
+        <a href="#progresso">Progresso</a>
+        <a href="#formulario">Registrar Treino</a>
+        <a href="#midia">Mídia</a>
+        <a href="#graficos">Gráficos</a>
+    </nav>
+
+    <main>
+        <section id="habitos">
+            <h2>Hábitos Saudáveis</h2>
+            <article class="card card-destaque">
+                <p class="first"><strong>Manter o corpo em movimento</strong> exige consistência e disciplina. A combinação de <em>musculação</em> e <em>corrida</em> pode contribuir para uma rotina ativa.</p>
+                <p class="highlight">Acompanhar a rotina de exercícios também ajuda na organização dos hábitos diários.</p>
+
+                <blockquote>
+                    "Pequenos hábitos diários, mantidos com constância, valem mais do que esforços isolados."
+                </blockquote>
+
+                <hr>
+
+                <p>Continue acompanhando abaixo as etapas de treino e o cálculo do seu IMC.</p>
+            </article>
+
+            <aside>
+                <h3>Dica</h3>
+                <p>Organizar horários para atividades físicas e registrar o progresso semanal pode ajudar no acompanhamento da rotina.</p>
+            </aside>
+        </section>
+
+        <section id="contato-rapido">
+            <h2>Recursos e Contatos</h2>
+            <p>Dicas de treinos diários: <a href="https://www.exemplo.com">Acesse a página de treinos</a></p>
+            <!-- CSS INLINE: estilo aplicado diretamente na tag, só para este parágrafo -->
+            <p style="color: #E0662E; font-weight: 600;">Ficou com dúvidas? <a href="mailto:treino@exemplo.com">Envie um e-mail para nossa equipe</a></p>
+        </section>
+
+        <section>
+            <h2>Glossário Fitness</h2>
+            <dl>
+                <dt><strong>Musculação</strong></dt>
+                <dd class="ufo">Treinamento com foco no desenvolvimento da força muscular.</dd>
+                <dt><strong>Trote</strong></dt>
+                <dd>Ritmo de corrida <mark>leve e contínuo</mark> utilizado em treinamentos.</dd>
+            </dl>
+        </section>
+
+        <section id="treino">
+            <h2>Macronutrientes Essenciais</h2>
+            <ul>
+                <li>Proteínas</li>
+                <li>Carboidratos</li>
+                <li>Gorduras</li>
+            </ul>
+
+            <h2>Etapas do Treino</h2>
+            <ol>
+                <li>Aquecimento</li>
+                <li>Exercícios de força</li>
+                <li>Cardio, corrida ou trote</li>
+            </ol>
+
+            <div id="imc">
+                <h3>Como Calcular o IMC</h3>
+                <p class="formula">Fórmula: <code>IMC = peso (kg) / altura² (m)</code></p>
+                <p>Exemplo: uma pessoa com 70&nbsp;kg e 1,75&nbsp;m tem <code>IMC = 70 / (1,75 × 1,75) ≈ 22,9</code>.</p>
+            </div>
+        </section>
+
+        <section id="progresso">
+            <h2>Resumo de Progressão Semanal</h2>
+            <div class="tabela-fit">
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Semana</th>
+                        <th colspan="2">Volume Planejado</th>
+                    </tr>
+                    <tr>
+                        <th>Treinos de Força</th>
+                        <th>Corrida (km)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Semana 1</td><td>4 sessões</td><td>15</td></tr>
+                    <tr><td>Semana 2</td><td>5 sessões</td><td>22</td></tr>
+                </tbody>
+            </table>
+            </div>
+
+            <p>Progresso da meta semanal:
+                <progress value="70" max="100">70%</progress>
+            </p>
+        </section>
+
+        <section id="formulario">
+            <h2>Registre seu Progresso Diário</h2>
+
+            <form action="#" method="post">
+                <label for="nome">Nome do atleta:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required autofocus>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="nome@exemplo.com" required>
+
+                <label for="data">Data do treino:</label>
+                <input type="date" id="data" name="data" required>
+
+                <label for="horario">Horário do treino:</label>
+                <input type="time" id="horario" name="horario">
+
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min="10" max="100">
+
+                <label>Atividade realizada:</label>
+                <input type="radio" id="musculacao" name="treino" value="Musculacao" required>
+                <label for="musculacao">Musculação</label>
+
+                <input type="radio" id="corrida" name="treino" value="Corrida">
+                <label for="corrida">Corrida</label>
+
+                <label for="duracao">Duração do treino:</label>
+                <input type="range" id="duracao" name="duracao" min="10" max="120" value="60"
+                       oninput="valorDuracao.value = duracao.value">
+                <output id="valorDuracao" for="duracao">60</output> minutos
+
+                <label for="modalidade">Modalidade:</label>
+                <input list="modalidades" id="modalidade" name="modalidade" placeholder="Escolha ou digite">
+                <datalist id="modalidades">
+                    <option value="Musculação">
+                    <option value="Corrida">
+                    <option value="Caminhada">
+                    <option value="Ciclismo">
+                    <option value="Natação">
+                </datalist>
+
+                <label for="observacao">Observações:</label>
+                <textarea id="observacao" name="observacao" rows="4" cols="40"
+                          placeholder="Conte como foi seu treino"></textarea>
+
+                <button type="submit" class="btn-cta">Salvar Treino</button>
+            </form>
+        </section>
+
+        <section id="midia">
+            <h2>Conteúdo Multimídia</h2>
+
+            <article class="card">
+                <h3>Áudio</h3>
+                <audio controls>
+                    <source src="media/audio-treino.mp3" type="audio/mpeg">
+                    <source src="media/audio-treino.ogg" type="audio/ogg">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+                <p class="aviso">Coloque um arquivo chamado <strong>audio-treino.mp3</strong> na pasta <strong>media</strong> para reproduzir o áudio.</p>
+            </article>
+
+            <article class="card">
+                <h3>Vídeo</h3>
+                <video controls poster="img/treino.jpg">
+                    <source src="media/video-treino.mp4" type="video/mp4">
+                    <source src="media/video-treino.ogv" type="video/ogg">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+                <p class="aviso">Coloque um arquivo chamado <strong>video-treino.mp4</strong> na pasta <strong>media</strong> para reproduzir o vídeo.</p>
+            </article>
+        </section>
+
+        <section id="graficos">
+            <h2>Elementos Gráficos do HTML5</h2>
+
+            <article class="card">
+                <h3>Canvas</h3>
+                <p>Gráfico demonstrativo dos treinos realizados durante a semana.</p>
+                <canvas id="graficoTreino" width="600" height="300">
+                    Seu navegador não suporta Canvas.
+                </canvas>
+            </article>
+
+            <article class="card">
+                <h3>SVG</h3>
+                <p>Representação gráfica de uma meta semanal.</p>
+
+                <svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="20" y="20" width="560" height="200" rx="20"
+                          fill="#E8F0E3" stroke="#1F4B3F" stroke-width="2"/>
+
+                    <circle cx="150" cy="120" r="70"
+                            fill="#E0662E" stroke="#1F4B3F" stroke-width="2"/>
+
+                    <text x="118" y="128" font-size="25" font-family="Arial" fill="#FBF8F1">70%</text>
+
+                    <text x="260" y="105" font-size="22" font-family="Arial" fill="#1F4B3F">
+                        Meta Semanal
+                    </text>
+
+                    <text x="260" y="140" font-size="17" font-family="Arial" fill="#1E2A22">
+                        7 de 10 atividades concluídas
+                    </text>
+                </svg>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p class="last">Página desenvolvida para demonstração dos principais recursos do HTML5.</p>
+        <p>Última atualização:
+            <time datetime="2026-09-02">02 de setembro de 2026</time>
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
